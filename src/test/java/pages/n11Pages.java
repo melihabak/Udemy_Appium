@@ -16,7 +16,23 @@ public class n11Pages {
 
 
     By kategorilerButonu = AppiumBy.xpath("//android.widget.FrameLayout[@content-desc=\"Kategoriler\"]/android.widget.FrameLayout/android.widget.ImageView");
-
+    By elektronikButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.ImageView");
+    By telefonVeAksesuarlariButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.ImageView");
+    By cepTelefonuButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.ImageView");
+    By filtreleButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.view.ViewGroup/android.widget.LinearLayout/androidx.appcompat.widget.LinearLayoutCompat/androidx.appcompat.widget.LinearLayoutCompat/android.widget.TextView[1]");
+    By markaButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.appcompat.widget.LinearLayoutCompat[2]/androidx.appcompat.widget.LinearLayoutCompat[2]/androidx.appcompat.widget.LinearLayoutCompat[1]/android.widget.TextView[1]");
+    By appleSecimi = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[3]/android.widget.TextView");
+    By uygulaButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.view.ViewGroup/android.widget.TextView");
+    By dahiliHafizaButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.appcompat.widget.LinearLayoutCompat[2]/androidx.appcompat.widget.LinearLayoutCompat[2]/androidx.appcompat.widget.LinearLayoutCompat[2]/android.widget.TextView[1]");
+    By gbButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[2]/android.widget.TextView");
+    By uygulaButonuiki = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.view.ViewGroup/android.widget.TextView");
+    By modelButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.appcompat.widget.LinearLayoutCompat[2]/androidx.appcompat.widget.LinearLayoutCompat[2]/androidx.appcompat.widget.LinearLayoutCompat[4]/android.widget.TextView[1]");
+    By modelSecimiButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[11]/android.widget.TextView");
+    By uygulaButonuuc = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.view.ViewGroup/android.widget.TextView");
+    By sonuclariGosterButonu = AppiumBy.id("com.dmall.mfandroid:id/tv_name");
+    By eklemeButonu = AppiumBy.id("com.dmall.mfandroid:id/ivAddToBasket");
+    By sepetimButonu = AppiumBy.xpath("//android.widget.FrameLayout[@content-desc=\"Sepetim, 1 new notification\"]/android.widget.FrameLayout/android.widget.ImageView");
+    By sepetKontrol = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.RelativeLayout");
 
 
     public n11Pages(AppiumDriver driver) {
@@ -27,45 +43,79 @@ public class n11Pages {
 
 
     public void kategoriTiklama() {
+
         driver.findElement(kategorilerButonu).click();
     }
 
     public void elektronikTiklama() {
+
+        driver.findElement(elektronikButonu).click();
     }
 
     public void telefonveAksesuarTiklama() {
+        driver.findElement(telefonVeAksesuarlariButonu).click();
     }
 
     public void capTelefonuTiklama() {
+        driver.findElement(cepTelefonuButonu).click();
     }
 
     public void filtreleTiklama() {
+        driver.findElement(filtreleButonu).click();
     }
 
     public void markaTiklama() {
+        driver.findElement(markaButonu).click();
     }
 
     public void appleTiklama() {
+        driver.findElement(appleSecimi).click();
     }
 
     public void uygulaTiklama() {
+        driver.findElement(uygulaButonu).click();
     }
 
     public void dahiliHafizaTiklama() {
+        driver.findElement(dahiliHafizaButonu).click();
     }
 
     public void gbTiklama() {
+        driver.findElement(gbButonu).click();
     }
 
+    public void uygulaTiklamaiki() {
+        driver.findElement(uygulaButonuiki).click();
+    }
+
+    public void modelTiklama(){
+        //System.out.println("Sorun burada 1");
+        driver.findElement(modelButonu).click();
+    }
     public void iPhone15plusTiklama() {
+
+        //System.out.println("Sorun burada 2");
+        driver.findElement(modelSecimiButonu).click();
+
+    }
+
+    public void uygulaTiklamauc() {
+        driver.findElement(uygulaButonuuc).click();
     }
 
     public void sonuclariGosterTiklama() {
+        driver.findElement(sonuclariGosterButonu).click();
     }
 
     public void eklemeButonuTiklama() {
+        driver.findElement(eklemeButonu).click();
     }
 
     public void sepetimTiklama() {
+        driver.findElement(sepetimButonu).click();
+    }
+
+    public void sepetKontrol(){
+        elementHelper.checkVisible(sepetKontrol);
     }
 }

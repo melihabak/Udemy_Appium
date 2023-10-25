@@ -55,19 +55,30 @@ public class n11StepDefinitions {
     }
 
     @When("\"256 GB\" tiklanir")
-    public void gbTiklanir() {
+    public void gbTiklanir(){
         n11Pages.gbTiklama();
+        n11Pages.uygulaTiklama();
     }
+    /*@When("Uygula2 tiklanir")
+    public void uygulaTiklanirki(){
+        n11Pages.uygulaTiklamaiki();
+    }*/
 
     @When("Model tiklanir")
     public void modelTiklanir() {
-        n11Pages.uygulaTiklama();
+        n11Pages.modelTiklama();
     }
 
     @When("\"iPhone15 Plus\" tiklanir")
     public void iphone15PlusTiklanir() {
         n11Pages.iPhone15plusTiklama();
+        n11Pages.uygulaTiklama();
     }
+
+    /*@When("Uygula3 tiklanir")
+    public void uygulaTiklaniruc(){
+        n11Pages.uygulaTiklamauc();
+    }*/
 
     @When("Sonuclari Goster tiklanir")
     public void sonuclariGosterTiklanir() {
@@ -82,9 +93,15 @@ public class n11StepDefinitions {
     @When("Sepetim tiklanir")
     public void sepetimTiklanir() {
         n11Pages.sepetimTiklama();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Then("Sepete urunun geldigi kontrol edilir")
     public void sepeteUrununGeldigiKontrolEdilir() {
+        n11Pages.sepetKontrol();
     }
 }

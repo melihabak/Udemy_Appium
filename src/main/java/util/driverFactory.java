@@ -25,7 +25,7 @@ public class driverFactory {
             capabilities.setCapability("appPackage", "com.dmall.mfandroid");
             capabilities.setCapability("appActivity", "com.dmall.mfandroid.activity.base.NHomeActivity");
             capabilities.setCapability("automationName", "UIAutomator2");
-            capabilities.setCapability("noReset", "true");
+            capabilities.setCapability("noReset", "false");
             capabilities.setCapability("platformVersion", "12.0");
 
         } else if (browser.equals("iOS")) {

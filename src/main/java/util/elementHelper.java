@@ -12,7 +12,7 @@ import java.time.Duration;
 public class elementHelper {
 
     AppiumDriver driver;
-    WebDriverWait wait;
+    static WebDriverWait wait;
     Actions action;
 
     public elementHelper(AppiumDriver driver){
@@ -35,7 +35,7 @@ public class elementHelper {
     public void sendKeys (By key,String text){
         findElement(key).sendKeys(text); //sendKeys -- Text göndermeyi sağlar bu fonksiyon
     }
-    public void checkVisible (By key){
+    public static void checkVisible(By key){
         wait.until(ExpectedConditions.presenceOfElementLocated(key));
     }
 

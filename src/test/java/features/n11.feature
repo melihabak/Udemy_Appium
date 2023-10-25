@@ -11,10 +11,10 @@
       When Uygula tiklanir
       When Dahili Hafiza tiklanir
       When "256 GB" tiklanir
-      When Uygula tiklanir
+
       When Model tiklanir
       When "iPhone15 Plus" tiklanir
-      When Uygula tiklanir
+
       When Sonuclari Goster tiklanir
       When + butonuna tiklanir
       When Sepetim tiklanir
