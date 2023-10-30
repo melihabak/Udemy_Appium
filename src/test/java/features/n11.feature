@@ -20,3 +20,11 @@
         When + butonuna tiklanir
         When Sepetim tiklanir
         Then Sepete urunun geldigi kontrol edilir
+
+    @case2
+      Scenario: n11 Mobil Uygulamasında Şifremi Unuttum Kısmına Gidip Mail Alma
+        When Siparislerim tiklanir
+        When Sifremi Unuttum tiklanir
+        When Eposta adresi girilir
+        When Devam Et tiklanir
+        Then Mailin gonderildigi kontrol edilir

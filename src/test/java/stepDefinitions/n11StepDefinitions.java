@@ -104,4 +104,33 @@ public class n11StepDefinitions {
     public void sepeteUrununGeldigiKontrolEdilir() {
         n11Pages.sepetKontrol();
     }
+
+    @When("Siparislerim tiklanir")
+    public void siparislerimTiklanir() {
+        n11Pages.siparislerimTiklama();
+    }
+
+    @When("Sifremi Unuttum tiklanir")
+    public void sifremiUnuttumTiklanir() {
+        n11Pages.sifremiUnuttumTiklama();
+    }
+
+    @When("Eposta adresi girilir")
+    public void epostaAdresiGirilir() {
+        n11Pages.mailGirme();
+    }
+
+    @When("Devam Et tiklanir")
+    public void devamEtTiklanir() {
+        n11Pages.devamEtTiklama();
+    }
+
+    @Then("Mailin gonderildigi kontrol edilir")
+    public void mailinGonderildigiKontrolEdilir() {
+        n11Pages.mailGonderimKontrol();
+    }
 }
+
+
+
+
