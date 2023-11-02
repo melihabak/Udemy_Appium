@@ -59,10 +59,6 @@ public class n11StepDefinitions {
         n11Pages.gbTiklama();
         n11Pages.uygulaTiklama();
     }
-    /*@When("Uygula2 tiklanir")
-    public void uygulaTiklanirki(){
-        n11Pages.uygulaTiklamaiki();
-    }*/
 
     @When("Model tiklanir")
     public void modelTiklanir() {
@@ -74,12 +70,6 @@ public class n11StepDefinitions {
         n11Pages.iPhone15plusTiklama();
         n11Pages.uygulaTiklama();
     }
-
-    /*@When("Uygula3 tiklanir")
-    public void uygulaTiklaniruc(){
-        n11Pages.uygulaTiklamauc();
-    }*/
-
     @When("Sonuclari Goster tiklanir")
     public void sonuclariGosterTiklanir() {
         n11Pages.sonuclariGosterTiklama();
@@ -128,6 +118,36 @@ public class n11StepDefinitions {
     @Then("Mailin gonderildigi kontrol edilir")
     public void mailinGonderildigiKontrolEdilir() {
         n11Pages.mailGonderimKontrol();
+    }
+
+    @When("Anne ve Bebek tiklanir")
+    public void anneVeBebekTiklanir() {
+        n11Pages.anneVeBebekTiklama();
+    }
+
+    @When("Oto Koltugu ve Ana Kucagı tiklanir")
+    public void otoKoltuguVeAnaKucagiTiklanir() {
+        n11Pages.otoKoltukVeAnaKucagiTiklama();
+    }
+
+    @When("Kanguru tiklanir")
+    public void kanguruTiklanir() {
+        n11Pages.kanguruTiklama();
+    }
+
+    @When("Akilli Siralama tiklanir")
+    public void akilliSiralamaTiklanir() {
+        n11Pages.akilliSiralamaTiklama();
+    }
+
+    @When("Azalan Fiyat tiklanir")
+    public void azalanFiyatTiklanir() {
+        n11Pages.azalanFiyatTiklama();
+    }
+
+    @Then("Ürünlerin ekrana gelip gelmedigi kontrol edilir")
+    public void urunlerinEkranaGelipGelmedigiKontrolEdilir() {
+        n11Pages.enPahaliKanguruUrunKontrol();
     }
 }
 

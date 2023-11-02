@@ -25,10 +25,8 @@ public class n11Pages {
     By uygulaButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.view.ViewGroup/android.widget.TextView");
     By dahiliHafizaButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.appcompat.widget.LinearLayoutCompat[2]/androidx.appcompat.widget.LinearLayoutCompat[2]/androidx.appcompat.widget.LinearLayoutCompat[2]/android.widget.TextView[1]");
     By gbButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[2]/android.widget.TextView");
-    By uygulaButonuiki = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.view.ViewGroup/android.widget.TextView");
     By modelButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.ScrollView/androidx.appcompat.widget.LinearLayoutCompat/androidx.appcompat.widget.LinearLayoutCompat[2]/androidx.appcompat.widget.LinearLayoutCompat[2]/androidx.appcompat.widget.LinearLayoutCompat[4]/android.widget.TextView[1]");
     By modelSecimiButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/androidx.recyclerview.widget.RecyclerView/androidx.appcompat.widget.LinearLayoutCompat[11]/android.widget.TextView");
-    By uygulaButonuuc = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[2]/android.widget.RelativeLayout[2]/android.view.ViewGroup/android.widget.TextView");
     By sonuclariGosterButonu = AppiumBy.id("com.dmall.mfandroid:id/tv_name");
     By eklemeButonu = AppiumBy.id("com.dmall.mfandroid:id/ivAddToBasket");
     By sepetimButonu = AppiumBy.xpath("//android.widget.FrameLayout[@content-desc=\"Sepetim, 1 new notification\"]/android.widget.FrameLayout/android.widget.ImageView");
@@ -38,6 +36,11 @@ public class n11Pages {
     By mailKismiTextGirme = AppiumBy.id("com.dmall.mfandroid:id/et_email_address");
     By devamEtButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.TextView");
     By mailGonderimKontrol = AppiumBy.id("com.dmall.mfandroid:id/rl_success_area");
+    By anneVeBebekButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Anne & Bebek\")");
+    By otoKoltukVeAnaKucagiButonu = AppiumBy.androidUIAutomator("Oto Koltuğu & Ana Kucağı");
+    //By kanguruButonu = AppiumBy.androidUIAutomator("Kanguru");
+    //By akilliSiralamaButonu = AppiumBy.androidUIAutomator("");
+    //By azalanFiyatButonu = AppiumBy.androidUIAutomator("");
     public n11Pages(AppiumDriver driver) {
         this.driver = driver;
         this.wait=new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -87,23 +90,9 @@ public class n11Pages {
         driver.findElement(gbButonu).click();
     }
 
-    public void uygulaTiklamaiki() {
-        driver.findElement(uygulaButonuiki).click();
+    public void modelTiklama(){driver.findElement(modelButonu).click();
     }
-
-    public void modelTiklama(){
-        //System.out.println("Sorun burada 1");
-        driver.findElement(modelButonu).click();
-    }
-    public void iPhone15plusTiklama() {
-
-        //System.out.println("Sorun burada 2");
-        driver.findElement(modelSecimiButonu).click();
-
-    }
-
-    public void uygulaTiklamauc() {
-        driver.findElement(uygulaButonuuc).click();
+    public void iPhone15plusTiklama() {driver.findElement(modelSecimiButonu).click();
     }
 
     public void sonuclariGosterTiklama() {
@@ -143,4 +132,30 @@ public class n11Pages {
     public void mailGonderimKontrol() {
         elementHelper.checkVisible(mailGonderimKontrol);
     }
+
+    public void anneVeBebekTiklama() {
+        driver.findElement(anneVeBebekButonu).click();
+
+    }
+
+    public void otoKoltukVeAnaKucagiTiklama() {
+        driver.findElement(otoKoltukVeAnaKucagiButonu).click();
+    }
+
+    public void kanguruTiklama() {
+    }
+
+    public void akilliSiralamaTiklama() {
+    }
+
+    public void azalanFiyatTiklama() {
+    }
+
+    public void enPahaliKanguruUrunKontrol() {
+    }
+
+
+
+
+
 }
