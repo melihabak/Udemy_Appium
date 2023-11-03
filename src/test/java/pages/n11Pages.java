@@ -58,7 +58,7 @@ public class n11Pages {
 
     public void elektronikTiklama() {
 
-        driver.findElement(elektronikButonu).click();
+        driver.findElement(elektronikButonu).click() ;
     }
 
     public void telefonveAksesuarTiklama() {
