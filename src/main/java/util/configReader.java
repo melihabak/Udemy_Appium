@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class configReader {
-
     private static Properties properties;
 
     public static Properties initialize_Properties() {

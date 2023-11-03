@@ -21,7 +21,6 @@ public class elementHelper {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         this.action = new Actions(driver);
     }
-
     public WebElement presenceElement(By key){
         return wait.until(ExpectedConditions.presenceOfElementLocated(key));
     }
