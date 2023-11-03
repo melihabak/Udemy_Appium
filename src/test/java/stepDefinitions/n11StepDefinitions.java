@@ -125,7 +125,7 @@ public class n11StepDefinitions {
         n11Pages.anneVeBebekTiklama();
     }
 
-    @When("Oto Koltugu ve Ana Kucagı tiklanir")
+    @When("Oto Koltugu ve Ana Kucagi tiklanir")
     public void otoKoltuguVeAnaKucagiTiklanir() {
         n11Pages.otoKoltukVeAnaKucagiTiklama();
     }
@@ -145,10 +145,12 @@ public class n11StepDefinitions {
         n11Pages.azalanFiyatTiklama();
     }
 
-    @Then("Ürünlerin ekrana gelip gelmedigi kontrol edilir")
+    @Then("Urunlerin ekrana gelip gelmedigi kontrol edilir")
     public void urunlerinEkranaGelipGelmedigiKontrolEdilir() {
         n11Pages.enPahaliKanguruUrunKontrol();
     }
+
+
 }
 
 

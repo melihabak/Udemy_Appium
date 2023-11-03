@@ -38,9 +38,10 @@ public class n11Pages {
     By mailGonderimKontrol = AppiumBy.id("com.dmall.mfandroid:id/rl_success_area");
     By anneVeBebekButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Anne & Bebek\")");
     By otoKoltukVeAnaKucagiButonu = AppiumBy.androidUIAutomator("Oto Koltuğu & Ana Kucağı");
-    //By kanguruButonu = AppiumBy.androidUIAutomator("Kanguru");
-    //By akilliSiralamaButonu = AppiumBy.androidUIAutomator("");
-    //By azalanFiyatButonu = AppiumBy.androidUIAutomator("");
+    By kanguruButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.ImageView");
+    By akilliSiralamaButonu = AppiumBy.id("com.dmall.mfandroid:id/listingSortTV");
+    By azalanFiyatButonu = AppiumBy.androidUIAutomator("Azalan Fiyat");
+    By enPahaliKanguruKontrol = AppiumBy.id("com.dmall.mfandroid:id/listingRV");
     public n11Pages(AppiumDriver driver) {
         this.driver = driver;
         this.wait=new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -130,6 +131,7 @@ public class n11Pages {
     }
 
     public void mailGonderimKontrol() {
+
         elementHelper.checkVisible(mailGonderimKontrol);
     }
 
@@ -139,19 +141,24 @@ public class n11Pages {
     }
 
     public void otoKoltukVeAnaKucagiTiklama() {
+
         driver.findElement(otoKoltukVeAnaKucagiButonu).click();
     }
 
     public void kanguruTiklama() {
+        driver.findElement(kanguruButonu);
     }
 
     public void akilliSiralamaTiklama() {
+        driver.findElement(akilliSiralamaButonu);
     }
 
     public void azalanFiyatTiklama() {
+        driver.findElement(azalanFiyatButonu);
     }
 
     public void enPahaliKanguruUrunKontrol() {
+        elementHelper.checkVisible(enPahaliKanguruKontrol);
     }
 
 
