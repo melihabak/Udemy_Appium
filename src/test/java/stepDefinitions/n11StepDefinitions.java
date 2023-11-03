@@ -81,13 +81,7 @@ public class n11StepDefinitions {
     }
 
     @When("Sepetim tiklanir")
-    public void sepetimTiklanir() {
-        n11Pages.sepetimTiklama();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+    public void sepetimTiklanir() {n11Pages.sepetimTiklama();
     }
 
     @Then("Sepete urunun geldigi kontrol edilir")
@@ -95,10 +89,6 @@ public class n11StepDefinitions {
         n11Pages.sepetKontrol();
     }
 
-    @When("Siparislerim tiklanir")
-    public void siparislerimTiklanir() {
-        n11Pages.siparislerimTiklama();
-    }
 
     @When("Sifremi Unuttum tiklanir")
     public void sifremiUnuttumTiklanir() {
@@ -151,6 +141,13 @@ public class n11StepDefinitions {
     }
 
 
+    @When("Hesabim tiklanir")
+    public void hesabimTiklanir() {n11Pages.hesabimTiklama();
+    }
+
+    @When("Giris Yap tiklanir")
+    public void girisYapTiklanir() {n11Pages.girisYapTiklama();
+    }
 }
 
 

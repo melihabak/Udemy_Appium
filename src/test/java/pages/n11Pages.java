@@ -31,17 +31,19 @@ public class n11Pages {
     By eklemeButonu = AppiumBy.id("com.dmall.mfandroid:id/ivAddToBasket");
     By sepetimButonu = AppiumBy.xpath("//android.widget.FrameLayout[@content-desc=\"Sepetim, 1 new notification\"]/android.widget.FrameLayout/android.widget.ImageView");
     By sepetKontrol = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.RelativeLayout");
-    By siparislerimButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.LinearLayout[2]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.LinearLayout[1]/android.widget.RelativeLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[4]/android.widget.ImageView");
     By sifremiUnuttumButonu = AppiumBy.id("com.dmall.mfandroid:id/tv_forgot_password");
     By mailKismiTextGirme = AppiumBy.id("com.dmall.mfandroid:id/et_email_address");
     By devamEtButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.TextView");
     By mailGonderimKontrol = AppiumBy.id("com.dmall.mfandroid:id/rl_success_area");
     By anneVeBebekButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Anne & Bebek\")");
-    By otoKoltukVeAnaKucagiButonu = AppiumBy.androidUIAutomator("Oto Koltuğu & Ana Kucağı");
+    By otoKoltukVeAnaKucagiButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Oto Koltuğu & Ana Kucağı\")");
     By kanguruButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[2]/android.widget.ImageView");
     By akilliSiralamaButonu = AppiumBy.id("com.dmall.mfandroid:id/listingSortTV");
-    By azalanFiyatButonu = AppiumBy.androidUIAutomator("Azalan Fiyat");
+    By azalanFiyatButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Azalan Fiyat\")");
     By enPahaliKanguruKontrol = AppiumBy.id("com.dmall.mfandroid:id/listingRV");
+    By hesabimButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Hesabım\")");
+    By girisYapButonu = AppiumBy.id("com.dmall.mfandroid:id/btn_login");
+
     public n11Pages(AppiumDriver driver) {
         this.driver = driver;
         this.wait=new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -114,9 +116,7 @@ public class n11Pages {
     
     
     //case 2 metotlari
-    public void siparislerimTiklama() {
-        driver.findElement(siparislerimButonu).click();
-    }
+
 
     public void sifremiUnuttumTiklama() {
         driver.findElement(sifremiUnuttumButonu).click();
@@ -130,9 +130,7 @@ public class n11Pages {
         driver.findElement(devamEtButonu).click();
     }
 
-    public void mailGonderimKontrol() {
-
-        elementHelper.checkVisible(mailGonderimKontrol);
+    public void mailGonderimKontrol() {elementHelper.checkVisible(mailGonderimKontrol);
     }
 
     public void anneVeBebekTiklama() {
@@ -146,23 +144,24 @@ public class n11Pages {
     }
 
     public void kanguruTiklama() {
-        driver.findElement(kanguruButonu);
+        driver.findElement(kanguruButonu).click();
     }
 
     public void akilliSiralamaTiklama() {
-        driver.findElement(akilliSiralamaButonu);
+        driver.findElement(akilliSiralamaButonu).click();
     }
 
     public void azalanFiyatTiklama() {
-        driver.findElement(azalanFiyatButonu);
+        driver.findElement(azalanFiyatButonu).click();
     }
 
     public void enPahaliKanguruUrunKontrol() {
         elementHelper.checkVisible(enPahaliKanguruKontrol);
     }
 
+    public void hesabimTiklama() {driver.findElement(hesabimButonu).click();
+    }
 
-
-
-
+    public void girisYapTiklama() {driver.findElement(girisYapButonu).click();
+    }
 }

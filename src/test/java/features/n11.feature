@@ -12,10 +12,8 @@
         When Uygula tiklanir
         When Dahili Hafiza tiklanir
         When "256 GB" tiklanir
-
         When Model tiklanir
         When "iPhone15 Plus" tiklanir
-
         When Sonuclari Goster tiklanir
         When + butonuna tiklanir
         When Sepetim tiklanir
@@ -23,7 +21,8 @@
 
     @case2
       Scenario: n11 Mobil Uygulamasında Şifremi Unuttum Kısmına Gidip Mail Alma
-        When Siparislerim tiklanir
+        When Hesabim tiklanir
+        When Giris Yap tiklanir
         When Sifremi Unuttum tiklanir
         When Eposta adresi girilir
         When Devam Et tiklanir
@@ -38,3 +37,4 @@
         When Akilli Siralama tiklanir
         When Azalan Fiyat tiklanir
         Then Urunlerin ekrana gelip gelmedigi kontrol edilir
+
