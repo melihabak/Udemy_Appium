@@ -38,3 +38,16 @@
         When Azalan Fiyat tiklanir
         Then Urunlerin ekrana gelip gelmedigi kontrol edilir
 
+    @case4
+      Scenario: n11 Mobil Uygulamasında Sepete Eklenen Ürünün Silinmesi
+        When Kategorilere tiklanir
+        When Giyim ve Ayakkabilara tiklanir
+        When Erkek Giyim ve Aksesuar tiklanır
+        When Dis Giyim tiklanir
+        When Gorulen ilk urun sepete eklenir
+        When Sepete ekle onaylanir
+        When Sepetim tiklanir
+        When Urun silme tiklanir
+        Then Urunun basarili bir sekilde silindigi kontrol edilir
+
+

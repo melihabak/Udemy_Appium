@@ -148,6 +148,34 @@ public class n11StepDefinitions {
     @When("Giris Yap tiklanir")
     public void girisYapTiklanir() {n11Pages.girisYapTiklama();
     }
+
+    @When("Giyim ve Ayakkabilara tiklanir")
+    public void giyimVeAyakkabilaraTiklanir() {n11Pages.giyimVeAyakkabiTiklama();
+    }
+
+    @When("Erkek Giyim ve Aksesuar tiklanır")
+    public void erkekGiyimVeAksesuarTiklanır() {n11Pages.erkekGiyimVeAksesuarTiklama();
+    }
+
+    @When("Dis Giyim tiklanir")
+    public void disGiyimTiklanir() {n11Pages.disGiyimTiklama();
+    }
+
+    @When("Gorulen ilk urun sepete eklenir")
+    public void gorulenIlkUrunSepeteEklenir() {n11Pages.gorulenIlkUrunSepeteEklemeButonu();
+    }
+
+    @When("Sepete ekle onaylanir")
+    public void sepeteEkleOnaylanir() {n11Pages.sepeteEklemeOnayButonuTiklama();
+    }
+
+    @When("Urun silme tiklanir")
+    public void urunSilmeTiklanir() {n11Pages.urunSilmeButonuTiklama();
+    }
+
+    @Then("Urunun basarili bir sekilde silindigi kontrol edilir")
+    public void urununBasariliBirSekildeSilindigiKontrolEdilir() {n11Pages.urunSilinmesiKontrol();
+    }
 }
 
 

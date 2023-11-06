@@ -21,7 +21,7 @@ public class driverFactory {
 
         if (browser.equals("Android")) {
             capabilities.setCapability("platformName", "Android");
-            capabilities.setCapability("udid", "emulator-5554");
+            capabilities.setCapability("udid", "R68R9042DXV");
             capabilities.setCapability("appPackage", "com.dmall.mfandroid");
             capabilities.setCapability("appActivity", "com.dmall.mfandroid.activity.base.NHomeActivity");
             capabilities.setCapability("automationName", "UIAutomator2");

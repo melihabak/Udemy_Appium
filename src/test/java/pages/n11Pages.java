@@ -44,6 +44,13 @@ public class n11Pages {
     By enPahaliKanguruKontrol = AppiumBy.id("com.dmall.mfandroid:id/listingRV");
     By hesabimButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Hesabım\")");
     By girisYapButonu = AppiumBy.id("com.dmall.mfandroid:id/btn_login");
+    By giyimVeAyakkabiButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Giyim & Ayakkabı\")");
+    By erkekGiyimVeAksesuarButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Erkek Giyim & Aksesuar\")");
+    By disGiyimButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Dış Giyim\")");
+    By gorulenIlkUrunButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.view.ViewGroup/android.view.ViewGroup/androidx.appcompat.widget.LinearLayoutCompat/androidx.appcompat.widget.LinearLayoutCompat/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.ImageView[2]");
+    By sepeteEklemeOnayButonu =AppiumBy.id("com.dmall.mfandroid:id/continueButton");
+    By urunSilmeButonu = AppiumBy.id("com.dmall.mfandroid:id/basketItemDeleteSelectedTV");
+    By silinenUrun = AppiumBy.androidUIAutomator("new UiSelector().text(\"Sepetiniz Boş Görünüyor\")");
 
     public n11Pages(AppiumDriver driver) {
         this.driver = driver;
@@ -165,5 +172,26 @@ public class n11Pages {
     }
 
     public void girisYapTiklama() {driver.findElement(girisYapButonu).click();
+    }
+
+    public void giyimVeAyakkabiTiklama() {driver.findElement(giyimVeAyakkabiButonu).click();
+    }
+
+    public void erkekGiyimVeAksesuarTiklama() {driver.findElement(erkekGiyimVeAksesuarButonu).click();
+    }
+
+    public void disGiyimTiklama() {driver.findElement(disGiyimButonu).click();
+    }
+
+    public void gorulenIlkUrunSepeteEklemeButonu() {driver.findElement(gorulenIlkUrunButonu).click();
+    }
+
+    public void sepeteEklemeOnayButonuTiklama() {driver.findElement(sepeteEklemeOnayButonu).click();
+    }
+
+    public void urunSilmeButonuTiklama() {driver.findElement(urunSilmeButonu).click();
+    }
+
+    public void urunSilinmesiKontrol() {elementHelper.checkVisible(silinenUrun);
     }
 }
