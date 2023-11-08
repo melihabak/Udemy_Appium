@@ -103,7 +103,7 @@ public class n11Pages {
 
     public void modelTiklama(){driver.findElement(modelButonu).click();
     }
-    public void iPhone15plusTiklama() {driver.findElement(modelSecimiButonu).click();
+    public void iPhone15ProTiklama() {driver.findElement(modelSecimiButonu).click();
     }
 
     public void sonuclariGosterTiklama() {
@@ -112,7 +112,7 @@ public class n11Pages {
 
     public void eklemeButonuTiklama() {
         driver.findElement(eklemeButonu).click();
-        driver.findElement(sepeteEkleButonu).click();
+        //driver.findElement(sepeteEkleButonu).click();
     }
 
     public void sepetimTiklama() {

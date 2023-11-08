@@ -13,7 +13,7 @@
         When Dahili Hafiza tiklanir
         When "256 GB" tiklanir
         When Model tiklanir
-        When "iPhone15 Plus" tiklanir
+        When "iPhone15 Pro" tiklanir
         When Sonuclari Goster tiklanir
         When + butonuna tiklanir
         When Sepetim tiklanir

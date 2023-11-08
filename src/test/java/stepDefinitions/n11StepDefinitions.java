@@ -65,9 +65,9 @@ public class n11StepDefinitions {
         n11Pages.modelTiklama();
     }
 
-    @When("\"iPhone15 Plus\" tiklanir")
+    @When("\"iPhone15 Pro\" tiklanir")
     public void iphone15PlusTiklanir() {
-        n11Pages.iPhone15plusTiklama();
+        n11Pages.iPhone15ProTiklama();
         n11Pages.uygulaTiklama();
     }
     @When("Sonuclari Goster tiklanir")
