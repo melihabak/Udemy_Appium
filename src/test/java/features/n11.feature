@@ -50,4 +50,12 @@
         When Urun silme tiklanir
         Then Urunun basarili bir sekilde silindigi kontrol edilir
 
+    @case5
+      Scenario: n11 Mobil Uygulamasında Siparis ve Iade Kismindan Rasgele Ilk Urunun Secilmesi
+        When Hesabim tiklanir
+        When Siparislerim ve Iadelerim tiklanir
+        When Gorulen ilk urun tiklanir
+        When USecilen urun sepete eklenir
+        When Urunlerin ekrana gelip gelmedigi kontrol edilir
+
 
