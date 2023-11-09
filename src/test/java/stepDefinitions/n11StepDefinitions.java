@@ -176,6 +176,34 @@ public class n11StepDefinitions {
     @Then("Urunun basarili bir sekilde silindigi kontrol edilir")
     public void urununBasariliBirSekildeSilindigiKontrolEdilir() {n11Pages.urunSilinmesiKontrol();
     }
+
+    @When("Siparislerim ve Iadelerim tiklanir")
+    public void siparislerimVeIadelerimTiklanir() {n11Pages.siparislerimVeIadelerimTiklama();
+
+    }
+
+    @When("Gorulen ilk urun tiklanir")
+    public void gorulenIlkUrunTiklanir() {n11Pages.gorulenIlkUrunTiklama();
+
+    }
+
+    @When("Secilen urun sepete eklenir")
+    public void secilenUrunSepeteEklenir() {n11Pages.secilenIlkUrunSepeteEkleme();
+    }
+
+    @When("Email girilir")
+    public void emailGirilir() {n11Pages.emailGirme();
+
+    }
+
+    @When("Sifre girilir")
+    public void sifreGirilir() {n11Pages.sifreGirme();
+    }
+
+
+    @When("Urunlerin ekrana gelip gelmedigi kontrol edilir bes")
+    public void urunlerinEkranaGelipGelmedigiKontrolEdilirBes() {n11Pages.urunKontrolCaseBes();
+    }
 }
 
 

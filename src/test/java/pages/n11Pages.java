@@ -31,7 +31,7 @@ public class n11Pages {
     By eklemeButonu = AppiumBy.id("com.dmall.mfandroid:id/ivAddToBasket");
     By sepeteEkleButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Sepete Ekle\")");
     By sepetimButonu = AppiumBy.xpath("//android.widget.FrameLayout[@content-desc=\"Sepetim, 1 new notification\"]/android.widget.FrameLayout/android.widget.ImageView");
-    By sepetKontrol = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.RelativeLayout");
+    By sepetKontrol = AppiumBy.androidUIAutomator("new UiSelector().text(\"1\")");
     By sifremiUnuttumButonu = AppiumBy.id("com.dmall.mfandroid:id/tv_forgot_password");
     By mailKismiTextGirme = AppiumBy.id("com.dmall.mfandroid:id/et_email_address");
     By devamEtButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout/android.view.ViewGroup/android.widget.TextView");
@@ -52,6 +52,12 @@ public class n11Pages {
     By urunSilmeButonu = AppiumBy.id("com.dmall.mfandroid:id/basketItemDeleteSelectedTV");
     By silinenUrun = AppiumBy.androidUIAutomator("new UiSelector().text(\"Sepetiniz Boş Görünüyor\")");
 
+    By siparislerimVeIadelerimButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Siparişlerim & İadelerim\")")  ;
+    By gorulenIlkUrunTiklamaButonu = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.ScrollView/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout[1]/android.widget.RelativeLayout/android.widget.ImageView");
+    By secilenIlkUrunSepeteEklemeButonu = AppiumBy.androidUIAutomator("new UiSelector().text(\"Sepete Ekle\")");
+    By ePostaAdresiKismi = AppiumBy.androidUIAutomator("new UiSelector().text(\"E-Posta Adresi\")");
+    By sifreKismi = AppiumBy.androidUIAutomator("new UiSelector().text(\"Şifre\")");
+    By urunKontroluCaseBes = AppiumBy.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ListView/android.widget.LinearLayout[2]/android.widget.LinearLayout[2]/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.widget.ImageView[2]");
     public n11Pages(AppiumDriver driver) {
         this.driver = driver;
         this.wait=new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -59,14 +65,10 @@ public class n11Pages {
     }
 
 
-    public void kategoriTiklama() {
-
-        driver.findElement(kategorilerButonu).click();
+    public void kategoriTiklama() {driver.findElement(kategorilerButonu).click();
     }
 
-    public void elektronikTiklama() {
-
-        driver.findElement(elektronikButonu).click() ;
+    public void elektronikTiklama() {driver.findElement(elektronikButonu).click() ;
     }
 
     public void telefonveAksesuarTiklama() {
@@ -193,5 +195,23 @@ public class n11Pages {
     }
 
     public void urunSilinmesiKontrol() {elementHelper.checkVisible(silinenUrun);
+    }
+
+    public void siparislerimVeIadelerimTiklama() {driver.findElement(siparislerimVeIadelerimButonu).click();
+    }
+
+    public void gorulenIlkUrunTiklama() {driver.findElement(gorulenIlkUrunTiklamaButonu).click();
+    }
+
+    public void secilenIlkUrunSepeteEkleme() {driver.findElement(secilenIlkUrunSepeteEklemeButonu).click();
+    }
+
+    public void emailGirme() {driver.findElement(ePostaAdresiKismi).sendKeys("melih.abak@gmail.com");
+    }
+
+    public void sifreGirme() {driver.findElement(sifreKismi).sendKeys("Mfa1907.");
+    }
+
+    public void urunKontrolCaseBes() {elementHelper.checkVisible(urunKontroluCaseBes);
     }
 }

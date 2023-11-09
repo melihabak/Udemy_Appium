@@ -16,6 +16,7 @@
         When "iPhone15 Pro" tiklanir
         When Sonuclari Goster tiklanir
         When + butonuna tiklanir
+        When Sepete ekle onaylanir
         When Sepetim tiklanir
         Then Sepete urunun geldigi kontrol edilir
 
@@ -53,9 +54,13 @@
     @case5
       Scenario: n11 Mobil Uygulamasında Siparis ve Iade Kismindan Rasgele Ilk Urunun Secilmesi
         When Hesabim tiklanir
+        When Giris Yap tiklanir
+        When Email girilir
+        When Sifre girilir
+        When Giris Yap tiklanir
         When Siparislerim ve Iadelerim tiklanir
         When Gorulen ilk urun tiklanir
-        When USecilen urun sepete eklenir
-        When Urunlerin ekrana gelip gelmedigi kontrol edilir
+        When Secilen urun sepete eklenir
+        When Urunlerin ekrana gelip gelmedigi kontrol edilir bes
 
 
